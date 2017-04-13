@@ -1,0 +1,29 @@
+//-
+   Created by student on 13-Apr-17.
+
+extends ../layouts/default.jade
+
+block header
+block content
+    p page 2
+    ul
+      li li text1
+        a(href="#") Item 1
+      li li text2
+        a(href="#") Item 2
+      li li text3
+        a(href="#") Item 3
+      li
+        | li text4
+        a(href="#") Item 4
+    div
+      input(type="text", placeholder="inline attribute")
+    div
+      input(
+        type="text"
+        placeholder="inline attribute"
+        )
+    include part-jade
+
+
+
