@@ -1,0 +1,24 @@
+extends ../layouts/default.jade
+
+block header
+block content
+  include ../data/array-of-objects
+  h2 Simple array
+  -var myArray = ["first", "second", "third", "forth", "fifth"]
+  ul
+    each number in myArray
+      li=number
+  h2 Simple array with index
+  ul
+    each number, i in myArray
+      li #{number} index - #{i}
+  h2 Array of objects
+    .row
+      each el in arrayOfObjects
+        .medium-4.column.content.objectPart
+          h3(class="#{el.className}") #{el.title}
+          p #{el.message}
+  include ../data/mixins
+
+
+
